@@ -39,13 +39,13 @@ public class Program
         {
             foreach (var repo in repositories)
             {
-                Console.WriteLine($"Namn: {repo.Name}");
-                Console.WriteLine($"Beskrivning: {repo.Description}");
-                Console.WriteLine($"URL: {repo.HtmlUrl}");
-                Console.WriteLine($"Hemsida: {repo.Homepage ?? "Ingen hemsida"}");
+                Console.WriteLine($"Name: {repo.Name}");
+                Console.WriteLine($"Homepage: {repo.Homepage ?? "None"}");
+                Console.WriteLine($"GitHub: {repo.HtmlUrl}");
+                Console.WriteLine($"Description: {repo.Description ?? "No description available"}");
                 Console.WriteLine($"Watchers: {repo.Watchers}");
-                Console.WriteLine($"Senast uppdaterad: {repo.PushedAt}");
-                Console.WriteLine(new string('-', 40));
+                Console.WriteLine($"Last push: {repo.PushedAt:yyyy-MM-dd HH:mm:ss}");
+                Console.WriteLine(new string('-', 40)); // Separator mellan objekt
             }
         }
     }
